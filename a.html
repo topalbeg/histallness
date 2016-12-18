@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<title>MaloSmoKoristiliW3</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+<style>
+body, html {
+    height: 100%;
+    font-family: Impact, Charcoal, sans-serif;
+}
+.bgimg {
+    background-position: center;
+    background-size: cover;
+    background-image: url("http://www.cafemonico.com/system/files/042016/5702a180f7c88b353000073b/full_bleed/Cafe_Monico_XX.jpg?1459790229");
+    min-height: 70%;
+}
+.menu {
+    display: none;
+}
+</style>
+
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-btn-block w3-hover-white">NASLOVNA</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="about.html" class="w3-btn-block w3-hover-white">O NASLOVU</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="menu.html" class="w3-btn-block w3-hover-white">MENI NASLOVA</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="where.html" class="w3-btn-block w3-hover-white">GDJE SE NASLOV NALAZI</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-xlarge w3-hide-small">
+    </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:120px">Naslov</span>
+  </div>
+ </header>
+
+<!-- O NASLOVU -->
+<div class="w3-container" id="O NASLOVU">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">O NASLOVU</span></h5>
+    <p>Naslov je nastao kao produkt zelje profesorice informatike. Ovaj kafic ima vise svrha jedna od njih je da ucenici potrose vikend praveci stranicu o kaficu.</p>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>"Naslov naslov naslov, ovaj kafic se zove naslov."</i></p>
+      <p>Vlasnik, sef ili vam ga direktor: Erwin Gutic</p>
+    </div>
+    <img src="http://www.cafemonico.com/system/files/042016/5702a5a1f7c88b4cd000006d/full_bleed/Copyright_Cafe_Monico_13_retina.jpg?1459791352" style="width:100%;max-width:1000px" class="w3-margin-top">
+    <p><strong>Radimo od:</strong> 6am to 5pm.</p>
+    <p><strong>Adresa:</strong> Gdje god da je cafe monico tu smo i mi jer totalno nismo ripoff</p>
+  </div>
+</div>
+
+<!-- MENI NASLOVA -->
+<div class="w3-container" id="MENI NASLOVA">
+  <div class="w3-content" style="max-width:700px">
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">MENI NASLOVA</span></h5>
+  
+<p> Nemamo nicega ovo stoji tu radi estetike </p>
+
+<!-- Contact/Area Container -->
+<div class="w3-container" id="where" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">GDJE PRONACI NASLOV</span></h5>
+    <p>Find us at some address at some place.</p>
+    <div id="googleMap" class="w3-sepia" style="width:100%;height:400px;"></div>
+    <p><span class="w3-tag">I TO NIJE SVE!</span> NASLOV NASLOV, NASLOOV NASLOV, posaljite poruku:</p>
+    <form action="form.asp" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Ime" required name="Ime"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="Koliko ljudova" required name="Koliko ljudova"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Datum i vrijeme" required name="Datum i vrijeme" value="2017-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Izrazito specialna poruka" required name="Oruka panjo"></p>
+      <p><button class="w3-btn w3-padding" type="submi">POSALJI PORUKU</button></p>
+    </form>
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+
+
+<!-- Add Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+
+<script>
+// Google Map Location
+var myCenter = new google.maps.LatLng(30.878114, 87.629798);
+
+function initialize() {
+var mapProp = {
+  center: myCenter,
+  zoom: 12,
+  scrollwheel: false,
+  draggable: false,
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+  position: myCenter,
+});
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
+
+
+
+</body>
+</html>
